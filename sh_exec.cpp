@@ -95,7 +95,7 @@ int sh_launch(char **commands) {
         if (commands[i+1] && strcmp(commands[i+1], "&") == 0){
             in_fd = 0;
             parse_input(commands[i], args);
-
+            printf("here");
             child_pid = sh_run(args, in_fd, 1);
             
             waitpid(child_pid, &status, 0);
@@ -103,7 +103,7 @@ int sh_launch(char **commands) {
                 break;
             }
             i++;
-            i++;
+            // i++;
 
         }
         parse_input(commands[i], args);
