@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-all: MyShell
-
-MyShell: keyhandles.o main.o
-	gcc main.o -o MyShell -Wall -Wextra -pedantic 
-
-main.o: main.c
-	gcc -c main.c -o main.o
-
-keyhandles.o: keyhandles.c
-	gcc -c keyhandles.c -o keyhandles.o
-
-clean:
-	rm *.o MyShell.exe
-=======
 CXX = g++
 CXXFLAGS = -Wall -Wextra -pedantic -std=c++17
 OBJ = main.o sh_exec.o sh_builtins.o
@@ -34,4 +19,4 @@ sh_builtins.o: sh_builtins.cpp sh_builtins.h
 	
 clean:
 	rm -f *.o MyShell
->>>>>>> 0ef9fdd (Done)
+
